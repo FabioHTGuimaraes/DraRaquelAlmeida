@@ -482,7 +482,7 @@ body {
 
 @media (max-width: 768px) {
 
-  /* HEADER */
+  /* ========= HEADER ========= */
   .header .container {
     flex-direction: column;
     align-items: center;
@@ -494,21 +494,17 @@ body {
   }
 
   .nav {
-    display: none; /* esconde menu no mobile */
+    display: none;
   }
 
-  /* HERO */
+  /* ========= HERO ========= */
   .hero-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-text h2 {
-    font-size: 24px;
-  }
-
   .hero-image {
-    display: none; /* remove a foto no celular */
+    display: none; /* remove foto */
   }
 
   .info-icons {
@@ -516,55 +512,55 @@ body {
     flex-wrap: wrap;
   }
 
-  /* SERVIÇOS */
+  /* ========= SERVIÇOS ========= */
   .servicos-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 embaixo de 2 */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
   }
 
   .servicos-card {
-    text-align: center;
     font-size: 14px;
+    text-align: center;
+    word-break: break-word;
   }
 
-  /* SOBRE */
-  .sobre-content {
-    flex-direction: column;
+  /* garante que NADA estoure */
+  .servicos,
+  .servicos * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ========= DEPOIMENTOS ========= */
+  .depoimentos-grid {
+    grid-template-columns: 1fr; /* 1x1 */
+  }
+
+  .depoimento-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ========= CONTATO ========= */
+  .contato-header {
     text-align: center;
   }
 
-  .sobre-imagem img {
-    max-width: 280px;
-    margin: 20px auto 0;
+  .contato-header h2,
+  .contato-header p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .sobre-titulo {
-    font-size: 26px;
-  }
-
-  /* DEPOIMENTOS */
-  .depoimentos-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* CONTATO */
   .contato-grid {
     grid-template-columns: 1fr;
   }
 
-  .contato-info,
-  .contato-form {
-    text-align: center;
-  }
-
-  .info-box {
-    justify-content: center;
-  }
-
-  /* FOOTER */
+  /* ========= FOOTER ========= */
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 30px;
   }
 
   .footer-social {
@@ -574,7 +570,6 @@ body {
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
-    gap: 10px;
   }
 }
 
