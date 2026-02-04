@@ -100,6 +100,7 @@ body {
   gap: 30px;
   margin-top: 20px;
   flex-wrap: wrap;
+  text-decoration: none;
 }
 
 .info-item {
@@ -108,6 +109,7 @@ body {
   gap: 8px;
   color: #0D244B;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .info-icon {
@@ -339,6 +341,7 @@ body {
   border-radius: 4px;
   margin-bottom: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-decoration: none;
 }
 
 .info-box .icon {
@@ -348,6 +351,7 @@ body {
 .info-box strong {
   display: block;
   color: #1f3b4d;
+  text-decoration: none;
 }
 
 .contato-form {
@@ -477,78 +481,110 @@ body {
 /* --- Adicionando estilo responsivo a página ---*/
 
 @media (max-width: 768px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
 
-    .hero-content {
+  /* HEADER */
+  .header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .nav {
+    display: none; /* esconde menu no mobile */
+  }
+
+  /* HERO */
+  .hero-content {
     flex-direction: column;
     text-align: center;
-    }
+  }
 
-    .hero-image {
+  .hero-text h2 {
+    font-size: 24px;
+  }
+
+  .hero-image {
+    display: none; /* remove a foto no celular */
+  }
+
+  .info-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* SERVIÇOS */
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 embaixo de 2 */
+  }
+
+  .servicos-card {
     text-align: center;
-    }
+    font-size: 14px;
+  }
 
-    .hero-text h2 {
+  /* SOBRE */
+  .sobre-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-imagem img {
+    max-width: 280px;
+    margin: 20px auto 0;
+  }
+
+  .sobre-titulo {
     font-size: 26px;
-    }
+  }
 
-    .nav {
-        display: none;
-    }
+  /* DEPOIMENTOS */
+  .depoimentos-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .info-icons {
-        justify-content: center;
-    }
+  /* CONTATO */
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .sobre-content {
-        flex-direction: column;
-        text-align: center;
-    }
+  .contato-info,
+  .contato-form {
+    text-align: center;
+  }
 
-    .sobre-imagem {
-        text-align: center;
-    }
+  .info-box {
+    justify-content: center;
+  }
 
-    .sobre-titulo {
-        font-size: 28px;
-    }
+  /* FOOTER */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
 
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+  .footer-social {
+    justify-content: center;
+  }
 
-    .footer-social {
-        justify-content: center;
-    }
-
-    .footer-bottom-content {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 1024px) {
-    .areas-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 600px) {
-    .areas-grid {
-        grid-template-columns: 1fr;
-    }
+  .servicos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    .areas-title {
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 900px) {
-  .contato-grid {
-    grid-template-columns: 1fr;
+  .depoimentos-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
