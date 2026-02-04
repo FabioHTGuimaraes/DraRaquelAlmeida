@@ -514,47 +514,62 @@ body {
 
   /* ========= SERVIÇOS ========= */
   .servicos-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .servicos-card {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.4;
     text-align: center;
-    word-break: break-word;
-  }
 
-  /* garante que NADA estoure */
-  .servicos,
-  .servicos * {
-    max-width: 100%;
-    box-sizing: border-box;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   /* ========= DEPOIMENTOS ========= */
   .depoimentos-grid {
-    grid-template-columns: 1fr; /* 1x1 */
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .depoimento-card {
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
+    padding: 20px;
   }
 
-  /* ========= CONTATO ========= */
-  .contato-header {
-    text-align: center;
-  }
-
-  .contato-header h2,
-  .contato-header p {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  .depoimento-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .contato-grid {
     grid-template-columns: 1fr;
+  }
+
+    .sobre-content {
+    flex-direction: column;
+  }
+
+  .sobre-texto {
+    order: 1;
+    text-align: left;
+  }
+
+  .sobre-imagem {
+    order: 2;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .sobre-imagem img {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
   }
 
   /* ========= FOOTER ========= */
