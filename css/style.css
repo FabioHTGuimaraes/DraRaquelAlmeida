@@ -556,6 +556,12 @@ body {
     text-align: center;
   }
 
+  .contato-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .contato h2,
   .contato h3,
   .contato p {
@@ -564,9 +570,18 @@ body {
 
   .contato-info {
     align-items: center;
+    width: 100%;
   }
 
-    .sobre-content {
+  .contato-form {
+    width: 100%;
+  }
+
+  .contato-header{
+    text-align: center;
+  }
+
+  .sobre-content {
     flex-direction: column;
   }
 
