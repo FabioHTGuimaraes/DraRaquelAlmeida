@@ -513,18 +513,21 @@ body {
   }
 
   /* ========= SERVIÇOS ========= */
+  .areas-grid,
   .servicos-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
+  .areas-card,
   .servicos-card {
-    font-size: 13px;
-    line-height: 1.4;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     text-align: center;
-
-    word-break: normal;
-    overflow-wrap: break-word;
-    hyphens: auto;
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   /* ========= DEPOIMENTOS ========= */
@@ -547,8 +550,20 @@ body {
     overflow-wrap: break-word;
   }
 
-  .contato-grid {
-    grid-template-columns: 1fr;
+
+  /* ===== CONTATO ===== */
+  .contato {
+    text-align: center;
+  }
+
+  .contato h2,
+  .contato h3,
+  .contato p {
+    text-align: center;
+  }
+
+  .contato-info {
+    align-items: center;
   }
 
     .sobre-content {
